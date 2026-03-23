@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayzak | Catálogo de Pinturas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main id="app">
+        <section id="seleccion-avion">
+            <h2>Seleccione Aeronave para Inspección</h2>
+            <div class="grid-aviones" id="grid-aviones">
+                </div>
+        </section>
+
+        <section id="seccion-fichas" class="hidden">
+<button class="btn-volver" onclick="volverInicio()">
+    <span>◀</span> VOLVER AL HANGAR
+</button>            <h2 id="titulo-avion">Documentación Técnica</h2>
+            <div class="lista-documentos" id="lista-documentos"></div>
+        </section>
+
+        <div id="modal-visor" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarVisor()">&times;</span>
+                <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
