@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayzak | Catálogo de Pinturas</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <h1>AYZAK <span>Fichas técnicas productos.</span></h1>
+        <p>Control de calidad & tratamiento superficial</p>
+    </header>
+
     <main id="app">
         <section id="seleccion-avion">
             <h2>Seleccione Aeronave para Inspección</h2>
-            <div class="grid-aviones" id="grid-aviones">
-                </div>
+            <div class="grid-aviones" id="grid-aviones"></div>
         </section>
 
         <section id="seccion-fichas" class="hidden">
-<button class="btn-volver" onclick="volverInicio()">
-    <span>◀</span> VOLVER AL HANGAR
-</button>            <h2 id="titulo-avion">Documentación Técnica</h2>
+            <button class="btn-volver" onclick="volverInicio()">
+                <span>◀</span> VOLVER AL HANGAR
+            </button> 
+            <h2 id="titulo-avion">Documentación Técnica</h2>
             <div class="lista-documentos" id="lista-documentos"></div>
         </section>
 

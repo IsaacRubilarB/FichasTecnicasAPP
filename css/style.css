@@ -62,10 +62,11 @@ header p {
     padding-bottom: 8px;
 }
 
-.grid-aviones {
+.grid-aviones, .lista-documentos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Bajamos a 250px */
+    gap: 25px;
+    padding: 20px; /* Asegúrate de que tenga padding para que no choque con los bordes */
 }
 
 .card-avion {
@@ -272,3 +273,57 @@ header p {
 }
 
 .close:hover { color: var(--accent); }
+
+/* --- ADAPTACIÓN PARA CELULARES (Media Query) --- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem; /* Título más pequeño para que no se corte */
+    }
+    
+    header p {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    #seleccion-avion h2, #titulo-avion {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .card-avion img {
+        height: 160px; /* Fotos menos altas para ver más aviones a la vez */
+    }
+
+    .btn-doc {
+        padding: 25px 15px; /* Botones de fichas un poco más compactos */
+    }
+
+    .icono-tecnico {
+        font-size: 2.5rem; /* Iconos un poco más pequeños */
+    }
+
+    /* El botón volver lo hacemos más ancho para el dedo */
+    .btn-volver {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    /* Ajuste del modal del PDF para que ocupe toda la pantalla */
+    .modal-content {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+    }
+    
+    .close {
+        top: 10px;
+        right: 15px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+}
